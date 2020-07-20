@@ -15,7 +15,7 @@ class App extends Component {
     currOptionsIndex: 0,
     selectedAnswerId: null,
     curScore: 0,
-    isToggledToFahrenheit: false,
+    isFahrenheit: false,
     history: [],
     isHistory: false
   }
@@ -85,7 +85,7 @@ class App extends Component {
   }
 
   onToggleHandler = () => {
-    this.setState({ isToggledToFahrenheit: !this.state.isToggledToFahrenheit })
+    this.setState({ isFahrenheit: !this.state.isFahrenheit })
   }
 
   navClickHander = (navItem) => {
@@ -101,7 +101,7 @@ class App extends Component {
 
     if (this.state.data) {
       const context = {
-        isToggledToFahrenheit: this.state.isToggledToFahrenheit,
+        isFahrenheit: this.state.isFahrenheit,
         cities: this.state.data[this.state.currOptionsIndex],
         selectAnswerHandler: this.selectedAnswerHandler,
         selectedAnswerId: this.state.selectedAnswerId,

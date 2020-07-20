@@ -6,8 +6,8 @@ import AppContext from '../../../context/app-context'
 
 const CityOption = ({ data, chosenModifierClass, click, isClicked }) => {
     const appContext = useContext(AppContext)
-    const isToggledToFahrenheit = appContext.isToggledToFahrenheit
-    const temp = isToggledToFahrenheit ? Math.round((data.temp * 9 / 5)) + 32 : data.temp
+    const isFahrenheit = appContext.isFahrenheit
+    const temp = isFahrenheit ? Math.round((data.temp * 9 / 5)) + 32 : data.temp
 
     return (
         <div className={`CityOption  ${chosenModifierClass}`} onClick={click}>
