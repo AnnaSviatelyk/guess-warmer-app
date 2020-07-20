@@ -1,0 +1,68 @@
+.Button__next {
+    width: 104px;
+    height: 40px;
+    border: none;
+    background-color: #45aaf2;
+    border-radius: 3px;
+
+    color: #fff;
+    font-size: 16px;
+    font-family: "Poppins";
+
+    cursor: pointer;
+    transition: scale 0.3;
+
+    &:hover {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: #dcdde1;
+        cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.Button__restart {
+    width: 104px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+
+    color: #2d98da70;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Poppins";
+
+    cursor: pointer;
+    transition: scale 0.3;
+
+    &:hover {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        color: #dcdde1;
+        cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

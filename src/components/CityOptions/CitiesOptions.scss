@@ -1,0 +1,24 @@
+.CityOptions {
+    margin-top: 140px;
+    &__question {
+        font-size: 24px;
+        font-weight: 300;
+        font-family: "Poppins";
+        color: #333333;
+
+        text-transform: uppercase;
+    }
+
+    &__score {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: "Poppins";
+        color: #333333;
+    }
+
+    &__all-cities {
+        display: flex;
+        justify-content: center;
+        margin-top: 21px;
+    }
+}
