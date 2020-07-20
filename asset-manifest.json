@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/guess-warmer-app/static/css/main.62b5ae69.chunk.css",
+    "main.js": "/guess-warmer-app/static/js/main.f1090436.chunk.js",
+    "main.js.map": "/guess-warmer-app/static/js/main.f1090436.chunk.js.map",
+    "runtime-main.js": "/guess-warmer-app/static/js/runtime-main.9a87e352.js",
+    "runtime-main.js.map": "/guess-warmer-app/static/js/runtime-main.9a87e352.js.map",
+    "static/js/2.62025a7a.chunk.js": "/guess-warmer-app/static/js/2.62025a7a.chunk.js",
+    "static/js/2.62025a7a.chunk.js.map": "/guess-warmer-app/static/js/2.62025a7a.chunk.js.map",
+    "index.html": "/guess-warmer-app/index.html",
+    "precache-manifest.eea74de5a34f685928aa66cde2d3e3de.js": "/guess-warmer-app/precache-manifest.eea74de5a34f685928aa66cde2d3e3de.js",
+    "service-worker.js": "/guess-warmer-app/service-worker.js",
+    "static/css/main.62b5ae69.chunk.css.map": "/guess-warmer-app/static/css/main.62b5ae69.chunk.css.map",
+    "static/js/2.62025a7a.chunk.js.LICENSE.txt": "/guess-warmer-app/static/js/2.62025a7a.chunk.js.LICENSE.txt",
+    "static/media/Clear.svg": "/guess-warmer-app/static/media/Clear.ff816a6b.svg",
+    "static/media/Clouds.svg": "/guess-warmer-app/static/media/Clouds.bfd87d49.svg",
+    "static/media/Drizzle.svg": "/guess-warmer-app/static/media/Drizzle.741ef3be.svg",
+    "static/media/Other.svg": "/guess-warmer-app/static/media/Other.7085c567.svg",
+    "static/media/Rain.svg": "/guess-warmer-app/static/media/Rain.741ef3be.svg",
+    "static/media/Snow.svg": "/guess-warmer-app/static/media/Snow.6c248142.svg",
+    "static/media/ThunderStorm.svg": "/guess-warmer-app/static/media/ThunderStorm.6ca4d282.svg",
+    "static/media/Tornado.svg": "/guess-warmer-app/static/media/Tornado.abd95cbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a87e352.js",
+    "static/js/2.62025a7a.chunk.js",
+    "static/css/main.62b5ae69.chunk.css",
+    "static/js/main.f1090436.chunk.js"
+  ]
+}
