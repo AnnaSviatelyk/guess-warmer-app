@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/guess-warmer-app/static/css/main.de9bbdd7.chunk.css",
-    "main.js": "/guess-warmer-app/static/js/main.a6199870.chunk.js",
-    "main.js.map": "/guess-warmer-app/static/js/main.a6199870.chunk.js.map",
+    "main.js": "/guess-warmer-app/static/js/main.09fbe8b8.chunk.js",
+    "main.js.map": "/guess-warmer-app/static/js/main.09fbe8b8.chunk.js.map",
     "runtime-main.js": "/guess-warmer-app/static/js/runtime-main.9a87e352.js",
     "runtime-main.js.map": "/guess-warmer-app/static/js/runtime-main.9a87e352.js.map",
     "static/js/2.c4b8c86d.chunk.js": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js",
     "static/js/2.c4b8c86d.chunk.js.map": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js.map",
     "index.html": "/guess-warmer-app/index.html",
-    "precache-manifest.717f066dec292f35fc63408c15a84bd6.js": "/guess-warmer-app/precache-manifest.717f066dec292f35fc63408c15a84bd6.js",
+    "precache-manifest.03e12ddc43321019ab5311b049dac3ea.js": "/guess-warmer-app/precache-manifest.03e12ddc43321019ab5311b049dac3ea.js",
     "service-worker.js": "/guess-warmer-app/service-worker.js",
     "static/css/main.de9bbdd7.chunk.css.map": "/guess-warmer-app/static/css/main.de9bbdd7.chunk.css.map",
     "static/js/2.c4b8c86d.chunk.js.LICENSE.txt": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js.LICENSE.txt",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.9a87e352.js",
     "static/js/2.c4b8c86d.chunk.js",
     "static/css/main.de9bbdd7.chunk.css",
-    "static/js/main.a6199870.chunk.js"
+    "static/js/main.09fbe8b8.chunk.js"
   ]
 }
