@@ -4,8 +4,8 @@ import './ToggleSwitcher.scss'
 const switcher = ({ click }) => (
     <div className='ToggleSwitcher' onChange={click}>
         <span className='ToggleSwitcher__fahrenheit'>°F</span>
-        <input type="checkbox" id="switch" />
-        <label htmlFor="switch">Toggle</label>
+        <input className='ToggleSwitcher__input' type="checkbox" id="switch" />
+        <label className='ToggleSwitcher__label' htmlFor="switch">Toggle</label>
     </div>
 )
 

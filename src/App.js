@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import CitiesOptions from './components/CityOptions/CitiesOptions'
-import Loader from './components/Loader/Loader'
 import mockData from './mockData'
-import Button from './components/Button/Button'
-import ToggleSwitcher from './components/ToggleSwitcher/ToggleSwitcher'
+import Loader from './components/Loader/Loader'
+import Buttons from './components/Buttons/Buttons'
 import AppContext from './context/app-context'
-import Navigation from './components/Navigation/Navigation'
+import ToolBar from './components/ToolBar/ToolBar'
 import HistoryPage from './components/HistoryPage/HistoryPage';
 import MainPage from './components/MainPage/MainPage'
-
 
 const myAppId = 'appid=8b1d635ad8d19cf658437581aeb08e79'
 class App extends Component {
@@ -21,7 +18,6 @@ class App extends Component {
     isToggledToFahrenheit: false,
     history: [],
     isHistory: false
-
   }
 
   componentDidMount() {
@@ -77,8 +73,6 @@ class App extends Component {
       selectedAnswerId: id,
       history: newHistoryArr
     })
-
-
   }
 
   restartGameHandler = () => {
@@ -100,52 +94,38 @@ class App extends Component {
     } else {
       this.setState({ isHistory: true })
     }
-
   }
-
 
   render() {
     let content = <Loader />
 
     if (this.state.data) {
+      const context = {
+        isToggledToFahrenheit: this.state.isToggledToFahrenheit,
+        cities: this.state.data[this.state.currOptionsIndex],
+        selectAnswerHandler: this.selectedAnswerHandler,
+        selectedAnswerId: this.state.selectedAnswerId,
+        nextBtnClick: this.nextBtnClickHandler,
+        disabledNext: !this.state.selectedAnswerId,
+        restartBtnClick: this.restartGameHandler,
+        curIndex: this.state.currOptionsIndex,
+        dataLength: this.state.data.length,
+        toggleClick: this.onToggleHandler,
+        navClick: this.navClickHander
+      }
 
-      content = <>
-        <div className='Toolbar'>
-          <ToggleSwitcher click={this.onToggleHandler} />
-          <Navigation click={this.navClickHander} />
-        </div>
-
-        <AppContext.Provider value={{
-          isToggledToFahrenheit: this.state.isToggledToFahrenheit,
-          cities: this.state.data[this.state.currOptionsIndex],
-          selectAnswerHandler: this.selectedAnswerHandler,
-          selectedAnswerId: this.state.selectedAnswerId,
-        }
-        }
-        >
-          {
-            !this.state.isHistory ? (
-              (
-                <>
-                  <MainPage curScore={this.state.curScore} maxScore={this.state.data.length} />
-                  {
-                    this.state.currOptionsIndex !== this.state.data.length - 1 ? (<div className='Buttons'>
-                      <Button
-                        click={this.nextBtnClickHandler}
-                        disabled={!this.state.selectedAnswerId}
-                        type='nextBtn'>
-                        Next
-              </Button>
-                      <Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button>
-
-                    </div>) : <div className='Buttons'><Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button></div>
-                  }
-                </>
-              )) : <HistoryPage results={this.state.history} />
-          }
-        </AppContext.Provider>
-      </>
-
+      content =
+        <>
+          <AppContext.Provider value={{ ...context }}>
+            <ToolBar />
+            {this.state.isHistory ? <HistoryPage results={this.state.history} /> :
+              <>
+                <MainPage curScore={this.state.curScore} maxScore={this.state.data.length} />
+                <Buttons />
+              </>
+            }
+          </AppContext.Provider>
+        </>
     }
 
     return (
@@ -157,4 +137,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default App

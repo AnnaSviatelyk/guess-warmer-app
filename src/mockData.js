@@ -19,8 +19,4 @@ export default [
     { name: 'Madris', id: 3117735 },
     { name: 'Hong Kong', id: 1819729 },
     { name: 'Las Vegas', id: 5506956 }
-
-
-
-
 ]
