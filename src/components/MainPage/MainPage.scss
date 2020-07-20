@@ -1,0 +1,18 @@
+.Cities-container {
+    margin-top: 100px;
+    &__question {
+        font-size: 24px;
+        font-weight: 300;
+        font-family: "Poppins";
+        color: #333333;
+
+        text-transform: uppercase;
+    }
+
+    &__score {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: "Poppins";
+        color: #333333;
+    }
+}

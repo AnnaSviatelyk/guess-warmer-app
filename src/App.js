@@ -6,6 +6,10 @@ import mockData from './mockData'
 import Button from './components/Button/Button'
 import ToggleSwitcher from './components/ToggleSwitcher/ToggleSwitcher'
 import AppContext from './context/app-context'
+import Navigation from './components/Navigation/Navigation'
+import HistoryPage from './components/HistoryPage/HistoryPage';
+import MainPage from './components/MainPage/MainPage'
+
 
 const myAppId = 'appid=8b1d635ad8d19cf658437581aeb08e79'
 class App extends Component {
@@ -14,7 +18,10 @@ class App extends Component {
     currOptionsIndex: 0,
     selectedAnswerId: null,
     curScore: 0,
-    isToggledToFahrenheit: false
+    isToggledToFahrenheit: false,
+    history: [],
+    isHistory: false
+
   }
 
   componentDidMount() {
@@ -50,20 +57,33 @@ class App extends Component {
       this.setState({ currOptionsIndex: newIndex })
     }
 
-    this.setState({ selectedAnswerId: null })
+    this.setState({
+      selectedAnswerId: null
+    })
 
   }
 
-  selectedAnswerHandler = (id, correctId) => {
+  selectedAnswerHandler = (id, correctId, addClass) => {
     if (id === correctId) {
       this.setState({ curScore: this.state.curScore + 1 })
     }
-    this.setState({ selectedAnswerId: id })
+    const newHistoryArr = [...this.state.history]
+    newHistoryArr.push({
+      cities: this.state.data[this.state.currOptionsIndex],
+      selectedAnswerId: id
+    })
+
+    this.setState({
+      selectedAnswerId: id,
+      history: newHistoryArr
+    })
+
 
   }
 
   restartGameHandler = () => {
     this.setState({
+      history: [],
       currOptionsIndex: 0,
       selectedAnswerId: null,
       curScore: 0
@@ -74,40 +94,58 @@ class App extends Component {
     this.setState({ isToggledToFahrenheit: !this.state.isToggledToFahrenheit })
   }
 
+  navClickHander = (navItem) => {
+    if (navItem === 'main') {
+      this.setState({ isHistory: false })
+    } else {
+      this.setState({ isHistory: true })
+    }
+
+  }
+
 
   render() {
     let content = <Loader />
 
     if (this.state.data) {
+
       content = <>
-        <ToggleSwitcher click={this.onToggleHandler} />
+        <div className='Toolbar'>
+          <ToggleSwitcher click={this.onToggleHandler} />
+          <Navigation click={this.navClickHander} />
+        </div>
+
         <AppContext.Provider value={{
-          isToggledToFahrenheit: this.state.isToggledToFahrenheit
+          isToggledToFahrenheit: this.state.isToggledToFahrenheit,
+          cities: this.state.data[this.state.currOptionsIndex],
+          selectAnswerHandler: this.selectedAnswerHandler,
+          selectedAnswerId: this.state.selectedAnswerId,
         }
         }
         >
-          <CitiesOptions
-            curScore={this.state.curScore}
-            cities={this.state.data[this.state.currOptionsIndex]}
-            selectAnswerHandler={this.selectedAnswerHandler}
-            selectedAnswerId={this.state.selectedAnswerId}
-            maxScore={this.state.data.length}
-          />
+          {
+            !this.state.isHistory ? (
+              (
+                <>
+                  <MainPage curScore={this.state.curScore} maxScore={this.state.data.length} />
+                  {
+                    this.state.currOptionsIndex !== this.state.data.length - 1 ? (<div className='Buttons'>
+                      <Button
+                        click={this.nextBtnClickHandler}
+                        disabled={!this.state.selectedAnswerId}
+                        type='nextBtn'>
+                        Next
+              </Button>
+                      <Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button>
+
+                    </div>) : <div className='Buttons'><Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button></div>
+                  }
+                </>
+              )) : <HistoryPage results={this.state.history} />
+          }
         </AppContext.Provider>
-        {
-          this.state.currOptionsIndex !== this.state.data.length - 1 ? (<div className='Buttons'>
-            <Button
-              click={this.nextBtnClickHandler}
-              disabled={!this.state.selectedAnswerId}
-              type='nextBtn'>
-              Next
-        </Button>
-            <Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button>
-
-          </div>) : <div className='Buttons'><Button type='restartBtn' click={this.restartGameHandler} disabled={this.state.currOptionsIndex === 0}>Restart</Button></div>
-        }
-
       </>
+
     }
 
     return (

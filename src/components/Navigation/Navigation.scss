@@ -1,0 +1,27 @@
+.Navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &__item {
+        margin-right: 16px;
+
+        font-family: "Poppins";
+        font-weight: 300;
+        font-size: 14px;
+
+        text-transform: uppercase;
+        transition: all 0.3s;
+
+        cursor: pointer;
+
+        &:hover {
+            color: #45aaf2;
+        }
+    }
+}
