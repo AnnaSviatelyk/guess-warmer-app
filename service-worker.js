@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/guess-warmer-app/precache-manifest.03e12ddc43321019ab5311b049dac3ea.js"
+  "/guess-warmer-app/precache-manifest.82e8b81f85890b9c39a7f33ff48df585.js"
 );
 
 self.addEventListener('message', (event) => {

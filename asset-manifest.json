@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/guess-warmer-app/static/css/main.de9bbdd7.chunk.css",
-    "main.js": "/guess-warmer-app/static/js/main.09fbe8b8.chunk.js",
-    "main.js.map": "/guess-warmer-app/static/js/main.09fbe8b8.chunk.js.map",
+    "main.css": "/guess-warmer-app/static/css/main.d2df6aa9.chunk.css",
+    "main.js": "/guess-warmer-app/static/js/main.8491b7b4.chunk.js",
+    "main.js.map": "/guess-warmer-app/static/js/main.8491b7b4.chunk.js.map",
     "runtime-main.js": "/guess-warmer-app/static/js/runtime-main.9a87e352.js",
     "runtime-main.js.map": "/guess-warmer-app/static/js/runtime-main.9a87e352.js.map",
-    "static/js/2.c4b8c86d.chunk.js": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js",
-    "static/js/2.c4b8c86d.chunk.js.map": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js.map",
+    "static/js/2.7d71b8fb.chunk.js": "/guess-warmer-app/static/js/2.7d71b8fb.chunk.js",
+    "static/js/2.7d71b8fb.chunk.js.map": "/guess-warmer-app/static/js/2.7d71b8fb.chunk.js.map",
     "index.html": "/guess-warmer-app/index.html",
-    "precache-manifest.03e12ddc43321019ab5311b049dac3ea.js": "/guess-warmer-app/precache-manifest.03e12ddc43321019ab5311b049dac3ea.js",
+    "precache-manifest.82e8b81f85890b9c39a7f33ff48df585.js": "/guess-warmer-app/precache-manifest.82e8b81f85890b9c39a7f33ff48df585.js",
     "service-worker.js": "/guess-warmer-app/service-worker.js",
-    "static/css/main.de9bbdd7.chunk.css.map": "/guess-warmer-app/static/css/main.de9bbdd7.chunk.css.map",
-    "static/js/2.c4b8c86d.chunk.js.LICENSE.txt": "/guess-warmer-app/static/js/2.c4b8c86d.chunk.js.LICENSE.txt",
+    "static/css/main.d2df6aa9.chunk.css.map": "/guess-warmer-app/static/css/main.d2df6aa9.chunk.css.map",
+    "static/js/2.7d71b8fb.chunk.js.LICENSE.txt": "/guess-warmer-app/static/js/2.7d71b8fb.chunk.js.LICENSE.txt",
     "static/media/Clear.svg": "/guess-warmer-app/static/media/Clear.ff816a6b.svg",
     "static/media/Clouds.svg": "/guess-warmer-app/static/media/Clouds.bfd87d49.svg",
     "static/media/Drizzle.svg": "/guess-warmer-app/static/media/Drizzle.741ef3be.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9a87e352.js",
-    "static/js/2.c4b8c86d.chunk.js",
-    "static/css/main.de9bbdd7.chunk.css",
-    "static/js/main.09fbe8b8.chunk.js"
+    "static/js/2.7d71b8fb.chunk.js",
+    "static/css/main.d2df6aa9.chunk.css",
+    "static/js/main.8491b7b4.chunk.js"
   ]
 }
