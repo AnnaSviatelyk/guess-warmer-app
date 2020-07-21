@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c4d1070a2dc5bbec4b150165d05e80b",
+    "revision": "33fed298ac28dc42786eba23c8e1b29c",
     "url": "/guess-warmer-app/index.html"
   },
   {
-    "revision": "c1e0ee9a465f99a85b94",
-    "url": "/guess-warmer-app/static/css/main.d2df6aa9.chunk.css"
+    "revision": "ed679c14e17bf64354f6",
+    "url": "/guess-warmer-app/static/css/main.36559fef.chunk.css"
   },
   {
-    "revision": "7e16e88a1a406425d3f5",
-    "url": "/guess-warmer-app/static/js/2.7d71b8fb.chunk.js"
+    "revision": "1ac717a05e7ebeff388a",
+    "url": "/guess-warmer-app/static/js/2.97e6746a.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/guess-warmer-app/static/js/2.7d71b8fb.chunk.js.LICENSE.txt"
+    "url": "/guess-warmer-app/static/js/2.97e6746a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c1e0ee9a465f99a85b94",
-    "url": "/guess-warmer-app/static/js/main.8491b7b4.chunk.js"
+    "revision": "ed679c14e17bf64354f6",
+    "url": "/guess-warmer-app/static/js/main.80c37add.chunk.js"
   },
   {
     "revision": "ca349e9179ebd2302051",
@@ -54,5 +54,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "abd95cbf600259c4a8cde6be281c66f3",
     "url": "/guess-warmer-app/static/media/Tornado.abd95cbf.svg"
+  },
+  {
+    "revision": "883d87555d00a6ce3beb8fe4067a3ed1",
+    "url": "/guess-warmer-app/static/media/groot.883d8755.svg"
   }
 ]);
