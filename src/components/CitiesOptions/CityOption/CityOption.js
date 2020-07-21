@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './CityOption.scss'
 import getIcon from '../../../helpers/weatherIcons'
 import AppContext from '../../../context/app-context'
-
+import PropTypes from 'prop-types'
 
 const CityOption = ({ data, chosenModifierClass, click, isClicked }) => {
     const appContext = useContext(AppContext)
@@ -16,6 +16,13 @@ const CityOption = ({ data, chosenModifierClass, click, isClicked }) => {
             <span className='CityOption__temp'>{isClicked ? temp : null} </span>
         </div >
     )
+}
+
+CityOption.propTypes = {
+    data: PropTypes.object,
+    chosenModifierClass: PropTypes.string,
+    click: PropTypes.func,
+    isClicked: PropTypes.bool
 }
 
 export default CityOption

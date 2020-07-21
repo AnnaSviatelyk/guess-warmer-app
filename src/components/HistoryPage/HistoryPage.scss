@@ -2,10 +2,12 @@
     margin-top: 100px;
     margin-bottom: 100px;
 
+    text-align: center;
+
     &__heading {
         font-size: 24px;
         font-weight: 300;
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         color: #333333;
 
         text-transform: uppercase;

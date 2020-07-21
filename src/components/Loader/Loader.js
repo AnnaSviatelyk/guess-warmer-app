@@ -1,8 +1,8 @@
 import React from 'react'
-import './Loader.css'
+import './Loader.scss'
 
 
-const loader = () => (
+const Loader = () => (
     <div className="Loader-container">
         <div id="frame_circle">
             <div className="circle"></div>
@@ -21,4 +21,4 @@ const loader = () => (
     </div>
 )
 
-export default loader 
+export default Loader 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './HistoryPage.scss'
 import CitiesOptions from '../CitiesOptions/CitiesOptions'
+import PropTypes from 'prop-types'
 
 const HistoryPage = ({ results }) => {
     const allAnswers = results.map(cur => {
@@ -18,5 +19,8 @@ const HistoryPage = ({ results }) => {
 
 }
 
+HistoryPage.propTypes = {
+    results: PropTypes.array
+}
 
 export default HistoryPage

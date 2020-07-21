@@ -1,5 +1,5 @@
 import React from 'react'
-import './ToolBar.css'
+import './ToolBar.scss'
 import Navigation from './Navigation/Navigation'
 import ToggleSwitcher from './ToggleSwitcher/ToggleSwitcher'
 import { useContext } from 'react'
@@ -9,7 +9,7 @@ const ToolBar = () => {
     const { toggleClick, navClick } = useContext(AppContext)
 
     return (
-        <div className='Toolbar'>
+        <div className='ToolBar'>
             <ToggleSwitcher click={toggleClick} />
             <Navigation click={navClick} />
         </div>

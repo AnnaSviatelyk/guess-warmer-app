@@ -1,7 +1,8 @@
 import React from 'react'
 import './ToggleSwitcher.scss'
+import PropTypes from 'prop-types'
 
-const switcher = ({ click }) => (
+const Switcher = ({ click }) => (
     <div className='ToggleSwitcher' onChange={click}>
         <span className='ToggleSwitcher__fahrenheit'>°F</span>
         <input className='ToggleSwitcher__input' type="checkbox" id="switch" />
@@ -9,4 +10,8 @@ const switcher = ({ click }) => (
     </div>
 )
 
-export default switcher
+Switcher.propTypes = {
+    click: PropTypes.func
+}
+
+export default Switcher

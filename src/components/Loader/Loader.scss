@@ -41,7 +41,6 @@
 
 #frame .bar {
     position: absolute;
-    /*        background:black;*/
     top: 0;
     left: 0;
     right: 0;
@@ -50,14 +49,14 @@
     width: 3px;
     height: 150px;
     z-index: 10;
-}
 
-#frame .bar:before {
-    content: "";
-    position: absolute;
-    background: #f1c40f;
-    width: 5px;
-    height: 30px;
+    &:before {
+        content: "";
+        position: absolute;
+        background: #f1c40f;
+        width: 5px;
+        height: 30px;
+    }
 }
 
 .bar:nth-child(1) {
